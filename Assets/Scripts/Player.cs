@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
     private LineRenderer lineRenderer;
     [SerializeField]
     float fishingLineSpeed = 1f;
+    [SerializeField]
+    float cameraCatchUpSpeed = 1.2f;
+
+    RaycastHit hit;
     void Start()
     {
         lineRenderer = fishingLine.GetComponent<LineRenderer>();
@@ -31,10 +35,20 @@ public class Player : MonoBehaviour
         lineRenderer.SetPosition(0, new Vector3(linePos.x, linePos.y - (fishingLineSpeed * Time.deltaTime), linePos.z));
         //Move Camera
         if(linePos.y < -4){
-            camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y - (fishingLineSpeed * Time.deltaTime), camera.transform.position.z);
+            if(camera.transform.position.y > linePos.y){
+                camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y - (fishingLineSpeed * cameraCatchUpSpeed * Time.deltaTime), camera.transform.position.z);
+            }
+
+            if(camera.transform.position.y <= linePos.y - gameObject.transform.position.y){
+                camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y - (fishingLineSpeed * Time.deltaTime), camera.transform.position.z);
+            }
+
+            
         }
+        
     }
     else{
+        //Reset fishing line and camera
         if(linePos.y < 0){
             lineRenderer.SetPosition(0, new Vector3(linePos.x, linePos.y + (fishingLineSpeed * Time.deltaTime), linePos.z));
         }
@@ -44,6 +58,22 @@ public class Player : MonoBehaviour
     }
 
 
+    void FixedUpdate(){
+
+        // if (Physics.Raycast(linePos, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        //     {
+        //         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+        //         Debug.Log("Did Hit");
+        //     }
+        //     else
+        //     {
+        //         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+        //         Debug.Log("Did not Hit");
+        //     }
+
+
+
+    }
 
     }
 }
