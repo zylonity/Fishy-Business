@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,12 @@ public class UIController : MonoBehaviour
     public int quotaCash = 100;
     public Image barFill;
     public TextMeshProUGUI cashText;
+
+    [Header("Timer")] 
+    public float timeSinceStart;
+    public float timeInDay; //in seconds (Should probably be stored somewhere else)
+    public GameObject timerHand;
+    public Image timerFill;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +28,7 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateTimer();
     }
 
     public void UpdateQuota()
@@ -34,5 +41,13 @@ public class UIController : MonoBehaviour
     {
         currentCash += amount;
         UpdateQuota();
+    }
+
+    public void UpdateTimer()
+    {
+        if (timeSinceStart >= timeInDay) return; //Stops updating timer once day is done
+        timeSinceStart += Time.deltaTime;
+        timerFill.fillAmount = timeSinceStart / timeInDay;
+        timerHand.transform.rotation = Quaternion.Euler(0,0,-(timeSinceStart % timeInDay) / timeInDay * 360);
     }
 }
