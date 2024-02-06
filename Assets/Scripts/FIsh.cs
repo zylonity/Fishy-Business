@@ -14,10 +14,12 @@ public class FIsh : MonoBehaviour
     public Transform pointA, pointB;
     
     public bool moved = false;
-    public bool caught = false;
+    public bool caught, hooked = false;
 
     Player player;
     Transform hook;
+
+    float timer = 0;
 
     void Start()
     {
@@ -55,9 +57,29 @@ public class FIsh : MonoBehaviour
         }
         else{
             if(hook.position.y > 1.2f){
-                player.canFish = true;
+                player.caughtFish = false;
                 player.uiController.fishCaught(ID);
+                hooked = false;
                 Destroy(gameObject);
+            }
+
+            
+
+        }
+
+        //Once hooked invoke fight so it runs in update
+        if(hooked){
+            if (FishStruggle()){
+                gameObject.transform.parent = hook;
+                player.caughtFish = true;
+                player.hookedFish = false;
+            }
+        }
+        else{
+            if(caught){
+                player.caughtFish = false;
+                player.hookedFish = false;
+                timer = 0;
             }
             
         }
@@ -68,17 +90,32 @@ public class FIsh : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        //Verify player touched fish and freeze screen
         if(col.tag == "Player"){
             player = col.transform.parent.parent.GetComponent<Player>();
-            if(player.canFish == true){
+            hook = col.transform;
+             if(player.hookedFish == false){
+                hooked = true;
+                player.hookedFish = true;
                 caught = true;
-                player.canFish = false;
-                gameObject.transform.parent = col.transform;
-                hook = col.transform;
-            }
+
+             }
             
         }
         
 
+    }
+
+    bool FishStruggle(){
+        timer += Time.deltaTime;
+
+        if(timer < 5){
+            //Add fish struggle here
+
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 }
