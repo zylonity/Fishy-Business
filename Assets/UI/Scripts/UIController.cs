@@ -43,6 +43,13 @@ public class UIController : MonoBehaviour
         UpdateQuota();
     }
 
+    public void fishCaught(string fishID)
+    {
+        if(fishID == "ClownFish"){
+            AddCash(10);
+        }
+    }
+
     public void UpdateTimer()
     {
         if (timeSinceStart >= timeInDay) return; //Stops updating timer once day is done

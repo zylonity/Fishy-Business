@@ -14,6 +14,10 @@ public class FIsh : MonoBehaviour
     public Transform pointA, pointB;
     
     public bool moved = false;
+    public bool caught = false;
+
+    Player player;
+    Transform hook;
 
     void Start()
     {
@@ -26,27 +30,55 @@ public class FIsh : MonoBehaviour
 
     void Update()
     {
-        //Reset fish trajectory
-        if(gameObject.transform.position.x == pointB.position.x && !moved){
-            end = Time.time;
-            gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            moved = true;
-        }
+        if(!caught){
+            //Reset fish trajectory
+            if(gameObject.transform.position.x == pointB.position.x && !moved){
+                end = Time.time;
+                gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                moved = true;
+            }
 
-        //Reset fish trajectory
-        if(gameObject.transform.position.x == pointA.position.x && moved){
-            start = Time.time;
-            gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-            moved = false;
-        }
+            //Reset fish trajectory
+            if(gameObject.transform.position.x == pointA.position.x && moved){
+                start = Time.time;
+                gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                moved = false;
+            }
 
-        //Move fish
-        if(!moved){
-            transform.position = Vector3.Lerp(startPoint, endPoint, (Time.time - start) * movementSpeed);
+            //Move fish
+            if(!moved){
+                transform.position = Vector3.Lerp(startPoint, endPoint, (Time.time - start) * movementSpeed);
+            }
+            else{
+                transform.position = Vector3.Lerp(endPoint, startPoint, (Time.time - end) * movementSpeed);
+            }
         }
         else{
-            transform.position = Vector3.Lerp(endPoint, startPoint, (Time.time - end) * movementSpeed);
+            if(hook.position.y > 1.2f){
+                player.canFish = true;
+                player.uiController.fishCaught(ID);
+                Destroy(gameObject);
+            }
+            
         }
         
+
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player"){
+            player = col.transform.parent.parent.GetComponent<Player>();
+            if(player.canFish == true){
+                caught = true;
+                player.canFish = false;
+                gameObject.transform.parent = col.transform;
+                hook = col.transform;
+            }
+            
+        }
+        
+
     }
 }

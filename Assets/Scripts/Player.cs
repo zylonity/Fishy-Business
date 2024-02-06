@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject fishingLine;
+    public GameObject fishingLine, hook;
     GameObject camera;
     private LineRenderer lineRenderer;
     [SerializeField]
     float fishingLineSpeed = 1f;
     [SerializeField]
     float cameraCatchUpSpeed = 1.2f;
+
+    public bool canFish = true;
+
+    public UIController uiController;
+
 
     Vector3 startPos, linePos;
     void Start()
@@ -31,6 +36,8 @@ public class Player : MonoBehaviour
         //Move Fishing line
         startPos = lineRenderer.GetPosition(0);
         linePos = lineRenderer.GetPosition(1);
+
+        hook.transform.position = new Vector3(fishingLine.transform.position.x, linePos.y + fishingLine.transform.position.y, hook.transform.position.z);
 
 
         if(Input.GetMouseButton(0)){
@@ -73,7 +80,7 @@ public class Player : MonoBehaviour
         {
             if (hit.collider.GetComponent<BoxCollider2D>().tag == "Fish")
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
             }
         }
 
