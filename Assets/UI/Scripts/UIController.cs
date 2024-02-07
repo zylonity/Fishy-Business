@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public int quotaCash = 100;
     public Image barFill;
     public TextMeshProUGUI cashText;
+    public GameObject FloatingNumberPrefab;
 
     [Header("Timer")] 
     public float timeSinceStart;
@@ -41,6 +42,10 @@ public class UIController : MonoBehaviour
     {
         currentCash += amount;
         UpdateQuota();
+        
+        //Spawns Floating UI
+        GameObject temp = Instantiate(FloatingNumberPrefab, cashText.transform.parent.parent);
+        temp.GetComponent<FloatingNumber>().SalePrice = amount;
     }
 
     public void fishCaught(string fishID)

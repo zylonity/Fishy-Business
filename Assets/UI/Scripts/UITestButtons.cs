@@ -21,7 +21,5 @@ public class UITestButtons : MonoBehaviour
     {
         int catchPrice = Random.Range(10, 1001);
         UIController.AddCash(catchPrice);
-        GameObject temp = Instantiate(FloatingNumberPrefab, this.transform);
-        temp.GetComponent<FloatingNumber>().SalePrice = catchPrice;
     }
 }
