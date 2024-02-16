@@ -1202,11 +1202,11 @@ PrefabInstance:
     - target: {fileID: 6607875564251727320, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
       propertyPath: pointA
       value: 
-      objectReference: {fileID: 1427510902645151148}
+      objectReference: {fileID: 0}
     - target: {fileID: 6607875564251727320, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
       propertyPath: pointB
       value: 
-      objectReference: {fileID: 2826712828187735134}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1540,11 +1540,11 @@ PrefabInstance:
     - target: {fileID: 6607875564251727320, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
       propertyPath: pointA
       value: 
-      objectReference: {fileID: 1427510902645151148}
+      objectReference: {fileID: 0}
     - target: {fileID: 6607875564251727320, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
       propertyPath: pointB
       value: 
-      objectReference: {fileID: 2826712828187735134}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2227,22 +2227,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &249842273417687877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1427510902645151148}
-  m_Layer: 0
-  m_Name: Point A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &714500714557310967
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,8 +2247,6 @@ Transform:
   - {fileID: 3068240377917888603}
   - {fileID: 2824624536091828683}
   - {fileID: 1915170898660382124}
-  - {fileID: 1427510902645151148}
-  - {fileID: 2826712828187735134}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2280,22 +2262,6 @@ GameObject:
   - component: {fileID: 9024094238505312306}
   m_Layer: 0
   m_Name: Square (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1072998785588007465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2826712828187735134}
-  m_Layer: 0
-  m_Name: Point B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2368,21 +2334,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1427510902645151148
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249842273417687877}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1944976, y: 2.8348181, z: -4.778099}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 714500714557310967}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511978396013182689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,21 +2445,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.78530234, y: -10.6555, z: -4.778099}
   m_LocalScale: {x: 5.8248506, y: 2.3205204, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 714500714557310967}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2826712828187735134
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072998785588007465}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8055024, y: 2.8348181, z: -4.778099}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714500714557310967}

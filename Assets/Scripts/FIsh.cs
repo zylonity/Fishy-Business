@@ -9,9 +9,14 @@ public class FIsh : MonoBehaviour
     private float movementSpeed = 1f;
     private float start;
     private float end;
+
+    private float pointA = -3.2f;
+    private float pointB = 4.8f;
+
+
     Vector3 startPoint, endPoint;
 
-    public Transform pointA, pointB;
+
     
     public bool moved = false;
     public bool caught, hooked = false;
@@ -24,24 +29,24 @@ public class FIsh : MonoBehaviour
     void Start()
     {
         //Default values
-        gameObject.transform.position = new Vector3(pointA.position.x, transform.position.y, transform.position.z);
+        gameObject.transform.position = new Vector3(pointA, transform.position.y, transform.position.z);
         start = Time.time;
-        startPoint = new Vector3(pointA.position.x, transform.position.y, transform.position.z);
-        endPoint = new Vector3(pointB.position.x, transform.position.y, transform.position.z);
+        startPoint = new Vector3(pointA, transform.position.y, transform.position.z);
+        endPoint = new Vector3(pointB, transform.position.y, transform.position.z);
     }
 
     void Update()
     {
         if(!caught){
             //Reset fish trajectory
-            if(gameObject.transform.position.x == pointB.position.x && !moved){
+            if(gameObject.transform.position.x == pointB && !moved){
                 end = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 moved = true;
             }
 
             //Reset fish trajectory
-            if(gameObject.transform.position.x == pointA.position.x && moved){
+            if(gameObject.transform.position.x == pointA && moved){
                 start = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 moved = false;
