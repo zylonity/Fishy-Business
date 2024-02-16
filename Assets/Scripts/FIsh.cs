@@ -5,12 +5,12 @@ using UnityEngine;
 public class FIsh : MonoBehaviour
 {
 
-    public string ID = "ClownFish";
-    private float movementSpeed = 1f;
+    public string ID = "Undefined";
+    public float movementSpeed = 1f;
     private float start;
     private float end;
 
-    private float pointA = -3.2f;
+    private float pointA = -3.9f;
     private float pointB = 4.8f;
 
 

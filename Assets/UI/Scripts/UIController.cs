@@ -50,8 +50,26 @@ public class UIController : MonoBehaviour
 
     public void fishCaught(string fishID)
     {
-        if(fishID == "ClownFish"){
+        if(fishID == "Undefined"){
             AddCash(10);
+        }
+        if(fishID == "ClownFish"){
+            AddCash(UnityEngine.Random.Range(10,30));
+        }
+        if(fishID == "Stickleback"){
+            AddCash(UnityEngine.Random.Range(5,15));
+        }
+        if(fishID == "Squid"){
+            AddCash(10);
+        }
+        if(fishID == "Pufferfish"){
+            AddCash(UnityEngine.Random.Range(500,825));
+        }
+        if(fishID == "Starfish"){
+            AddCash(10);
+        }
+        if(fishID == "Blobfish"){
+            AddCash(UnityEngine.Random.Range(1000,5000));
         }
     }
 
