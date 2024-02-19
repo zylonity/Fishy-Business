@@ -13,7 +13,6 @@ public class FIsh : MonoBehaviour
     private float pointA = -3.9f;
     private float pointB = 4.8f;
 
-
     Vector3 startPoint, endPoint;
 
 
@@ -33,6 +32,7 @@ public class FIsh : MonoBehaviour
         start = Time.time;
         startPoint = new Vector3(pointA, transform.position.y, transform.position.z);
         endPoint = new Vector3(pointB, transform.position.y, transform.position.z);
+        
     }
 
     void Update()
