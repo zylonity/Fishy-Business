@@ -27,14 +27,80 @@ public class fishingMechanic : MonoBehaviour
     [SerializeField] float hookGravity = 0.005f;
     [SerializeField] float hookDeProgressPower = 0.1f;
 
+    [SerializeField] SpriteRenderer hookSpriteRenderer;
 
+    [SerializeField] Transform progressBarContainer;
 
-    private void Update()
+    bool pause = false;
+
+    [SerializeField] float failTimer = 10f;
+    private void Start()
     {
-        Fish();
-        Hook();
+        Resize();
     }
 
+    private void Update()
+    {   
+        if (pause) { return; }
+
+        Fish();
+        Hook();
+        ProgressCheck();
+    }
+    private void Resize()
+    {
+        Bounds b = hookSpriteRenderer.bounds;
+        float ySize = b.size.y;
+        Vector3 ls = hook.localScale;
+        float distance = Vector3.Distance(top.position, bottom.position);
+        ls.y = (distance / ySize * hookSize);
+        hook.localScale = ls;
+    }
+
+    private void ProgressCheck()
+    {
+        Vector3 ls = progressBarContainer.localScale;
+        ls.y = hookProgress;
+        progressBarContainer.localScale = ls;
+
+        float min = hookPosition - hookSize / 2;
+        float max = hookPosition + hookSize / 2;
+
+        if (min < fishPosition && fishPosition < max)
+        {
+            hookProgress += hookPower * Time.deltaTime;
+        }
+        else
+        {
+            hookProgress -= hookDeProgressPower * Time.deltaTime;
+
+            failTimer -= Time.deltaTime;
+            if(failTimer < 0f)
+            {
+                Lose();
+            }
+        }
+        
+        if (hookProgress > 1f)
+        {
+            Win();
+        }
+
+        hookProgress = Mathf.Clamp(hookProgress, 0f, 1f);
+    }
+
+    private void Win()
+    {
+        pause = true;
+        Debug.Log("You Caught Fish !!");
+
+    }
+    private void Lose()
+    {
+        pause = true;
+        Debug.Log("The fish got away :(");
+
+    }
     void Hook()
     {
         if(Input.GetMouseButton(0))
