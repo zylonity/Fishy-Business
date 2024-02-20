@@ -37,7 +37,7 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        if(!caught){
+        if(!caught && !hooked){
             //Reset fish trajectory
             if(gameObject.transform.position.x == pointB && !moved){
                 end = Time.time;
@@ -75,6 +75,7 @@ public class Fish : MonoBehaviour
         //Once hooked invoke fight so it runs in update
         if(hooked){
             if (FishStruggle()){
+                caught = true;
                 gameObject.transform.parent = hook;
                 player.caughtFish = true;
                 player.hookedFish = false;
@@ -82,6 +83,7 @@ public class Fish : MonoBehaviour
         }
         else{
             if(caught){
+                caught = false;
                 player.caughtFish = false;
                 player.hookedFish = false;
                 timer = 0;
@@ -99,10 +101,9 @@ public class Fish : MonoBehaviour
         if(col.tag == "Player"){
             player = col.transform.parent.parent.GetComponent<Player>();
             hook = col.transform;
-             if(player.hookedFish == false){
-                hooked = true;
+             if(player.hookedFish == false && player.caughtFish == false){
                 player.hookedFish = true;
-                caught = true;
+                hooked = true;
 
              }
             
