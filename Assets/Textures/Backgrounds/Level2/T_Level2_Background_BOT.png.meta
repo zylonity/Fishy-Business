@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7c4956395272cf4e89d2c7c62e5d660
+guid: 209f1859eeb787b42bcef28921f96577
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_0
+      name: T_Level2_Background_BOT_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e9f0ce2d9d0894480be2a381343da7
-      internalID: 1391040263
+      spriteID: 105638732039c6b43bec33b444938978
+      internalID: 512985332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_1
+      name: T_Level2_Background_BOT_1
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 450
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0116d901e5a1f7c4b923013e519390e3
-      internalID: -1286243236
+      spriteID: 43099fa18fa126042ad9d481172cfc9b
+      internalID: 901926087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_2
+      name: T_Level2_Background_BOT_2
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 900
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7c676427c7c11f41a6bc10a21488bd6
-      internalID: 916069993
+      spriteID: ffd157efc72ba294f8e3fdce569b1b19
+      internalID: -1447226823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_3
+      name: T_Level2_Background_BOT_3
       rect:
         serializedVersion: 2
-        x: 3240
+        x: 1350
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8871f34b5894e746860903980cd3b09
-      internalID: 1953226031
+      spriteID: d1d271ef273dde54ea8fcf8f17eeb2ab
+      internalID: 1236083292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_4
+      name: T_Level2_Background_BOT_4
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 1800
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 563bf0647af31c24ca16fcd128379aba
-      internalID: -1453645320
+      spriteID: cac7b5092bda79c4c93297b969ed0079
+      internalID: -1467149644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_5
+      name: T_Level2_Background_BOT_5
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29617d4146e72444aa44fdbd1cc595ec
+      internalID: 1970832045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_6
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba87631f03f320f42a0f89ab2b6559d3
+      internalID: -431229233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_7
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb46bc97303e4d24390d840de5ffd748
+      internalID: 1470303124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a455275ebfeee4bb0e3ae7bd470cd7
+      internalID: 891401635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_9
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7b655ecb8e8fa41b92cff80820ec7f
+      internalID: -1543031525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_10
+      rect:
+        serializedVersion: 2
+        x: 4500
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2a76776e63a4c4aa3bcc5afab2764c
+      internalID: 472360842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_11
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 0
+        width: 450
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158ba9f9d13b3c44f95579515f44fbd5
+      internalID: -824337946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Level2_Background_BOT_12
       rect:
         serializedVersion: 2
         x: 5400
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44244ab03892c7b4f938d203a5d0f8f8
-      internalID: 1573212894
+      spriteID: 03412dc869985df43ba89191c99f5f62
+      internalID: 1543005285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level1_Background_BOT_6
+      name: T_Level2_Background_BOT_13
       rect:
         serializedVersion: 2
-        x: 6480
+        x: 5850
         y: 0
-        width: 1080
-        height: 204
+        width: 450
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,113 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e90cdd897a8b8a43bff005c6e38cccb
-      internalID: -1998061168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level1_Background_BOT_7
-      rect:
-        serializedVersion: 2
-        x: 7560
-        y: 0
-        width: 1080
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 335ccc29933be16439b8b02d21332f81
-      internalID: -1892089453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level1_Background_BOT_8
-      rect:
-        serializedVersion: 2
-        x: 8640
-        y: 0
-        width: 1080
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b61230c931d0134b8eaba6795105357
-      internalID: -795254306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level1_Background_BOT_9
-      rect:
-        serializedVersion: 2
-        x: 9720
-        y: 0
-        width: 1080
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: decb71dd141dfbd4f9f7414402c3742b
-      internalID: -72570133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level1_Background_BOT_10
-      rect:
-        serializedVersion: 2
-        x: 10800
-        y: 0
-        width: 1080
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddf4efec433f0714cb0a7ceedca92d5e
-      internalID: -1706994084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level1_Background_BOT_11
-      rect:
-        serializedVersion: 2
-        x: 11880
-        y: 0
-        width: 1080
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 505d900c44ffd364eb44858b42c8b19f
-      internalID: 1103542359
+      spriteID: 274f9966c679e044791d7550a46cbdee
+      internalID: -707829393
       vertices: []
       indices: 
       edges: []
@@ -385,18 +427,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      T_Level1_Background_BOT_0: 1391040263
-      T_Level1_Background_BOT_1: -1286243236
-      T_Level1_Background_BOT_10: -1706994084
-      T_Level1_Background_BOT_11: 1103542359
-      T_Level1_Background_BOT_2: 916069993
-      T_Level1_Background_BOT_3: 1953226031
-      T_Level1_Background_BOT_4: -1453645320
-      T_Level1_Background_BOT_5: 1573212894
-      T_Level1_Background_BOT_6: -1998061168
-      T_Level1_Background_BOT_7: -1892089453
-      T_Level1_Background_BOT_8: -795254306
-      T_Level1_Background_BOT_9: -72570133
+      T_Level2_Background_BOT_0: 512985332
+      T_Level2_Background_BOT_1: 901926087
+      T_Level2_Background_BOT_10: 472360842
+      T_Level2_Background_BOT_11: -824337946
+      T_Level2_Background_BOT_12: 1543005285
+      T_Level2_Background_BOT_13: -707829393
+      T_Level2_Background_BOT_2: -1447226823
+      T_Level2_Background_BOT_3: 1236083292
+      T_Level2_Background_BOT_4: -1467149644
+      T_Level2_Background_BOT_5: 1970832045
+      T_Level2_Background_BOT_6: -431229233
+      T_Level2_Background_BOT_7: 1470303124
+      T_Level2_Background_BOT_8: 891401635
+      T_Level2_Background_BOT_9: -1543031525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

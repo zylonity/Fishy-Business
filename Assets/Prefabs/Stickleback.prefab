@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6417693488174078083}
   - component: {fileID: 5245301758462340396}
   - component: {fileID: 3993414997800016086}
+  - component: {fileID: 1949337017157707424}
+  - component: {fileID: 1985241585330266978}
   m_Layer: 0
   m_Name: Stickleback
   m_TagString: Fish
@@ -222,3 +224,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7756939, y: 1.4519119}
   m_EdgeRadius: 0
+--- !u!95 &1949337017157707424
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879186787802736334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd9a104184b9aa64e99ac827cffee087, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1985241585330266978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879186787802736334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875317c4674015448b57894979ddb02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSheetName: Stickleback
