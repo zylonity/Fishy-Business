@@ -110,6 +110,16 @@ public class fishingMechanic : MonoBehaviour
         hookPullVelocity -= hookGravity * Time.deltaTime;
 
         hookPosition += hookPullVelocity;
+
+        if(hookPosition - hookSize / 2 <= 0f && hookPullVelocity < 0f)
+        {
+            hookPullVelocity = 0f;
+        }
+        if (hookPosition + hookSize / 2 >= 1f && hookPullVelocity > 0f)
+        {
+            hookPullVelocity = 0f;
+        }
+
         hookPosition = Mathf.Clamp(hookPosition, hookSize / 2, 1 - hookSize /2);
         hook.position = Vector3.Lerp(bottom.position, top.position, hookPosition);
     }
