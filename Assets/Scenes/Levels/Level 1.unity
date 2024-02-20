@@ -2215,7 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCash: 0
-  quotaCash: 9999
+  quotaCash: 100
   barFill: {fileID: 666684276}
   cashText: {fileID: 1595368668}
   FloatingNumberPrefab: {fileID: 1157456896194621837, guid: 2482dde791eaa6348b336db4c13a449e, type: 3}
