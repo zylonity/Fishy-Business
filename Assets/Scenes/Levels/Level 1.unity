@@ -1067,6 +1067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clownfish
       objectReference: {fileID: 0}
+    - target: {fileID: 6210372919282111213, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6451882029103288477, guid: f78f78a3fe905fd4587274b3dcad7056, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1199,6 +1203,10 @@ PrefabInstance:
     - target: {fileID: 2507605698565741276, guid: 5708651569e5a91448655a2401564d73, type: 3}
       propertyPath: hookedFish
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507605698565741276, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: levelHeight
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 2507605698565741276, guid: 5708651569e5a91448655a2401564d73, type: 3}
       propertyPath: uiController
@@ -2035,6 +2043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starfish
       objectReference: {fileID: 0}
+    - target: {fileID: 6381052548995396822, guid: 8d354e45ca09c3740b761ec2c0f807c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9147986158041172141, guid: 8d354e45ca09c3740b761ec2c0f807c8, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2140,6 +2152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blobfish
       objectReference: {fileID: 0}
+    - target: {fileID: 4922818085553474796, guid: 4a66d6e817734ac478a6ca427c5e0627, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2201,6 +2217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pufferfish
       objectReference: {fileID: 0}
+    - target: {fileID: 7322472296862496012, guid: 4ff1359926a1f7545b87ec3c8e0c7b58, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2217,6 +2237,10 @@ PrefabInstance:
     - target: {fileID: 1879186787802736334, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
       propertyPath: m_Name
       value: Stickleback
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879186787802736334, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6162774693532588904, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
       propertyPath: m_RootOrder
@@ -2322,6 +2346,10 @@ PrefabInstance:
     - target: {fileID: 3187362585901630552, guid: 8344628cb7b27394290f1b0d4d1fb865, type: 3}
       propertyPath: m_Name
       value: Squid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187362585901630552, guid: 8344628cb7b27394290f1b0d4d1fb865, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
