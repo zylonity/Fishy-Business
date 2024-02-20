@@ -45,10 +45,11 @@ public class Player : MonoBehaviour
             hook.transform.position = new Vector3(fishingLine.transform.position.x, linePos.y + fishingLine.transform.position.y, hook.transform.position.z);
 
             //Only let player move fishing line if they haven't caught a fish
-            if(!caughtFish && Input.GetMouseButton(0)){
+            if(!caughtFish && Input.GetMouseButton(0) ){
                 lineRenderer.SetPosition(1, new Vector3(linePos.x, linePos.y - (fishingLineSpeed * Time.deltaTime), linePos.z));
+
                 //Move Camera
-                if(linePos.y < -4){
+                if(linePos.y < -4 && linePos.y > levelHeight){
                     if(camera.transform.position.y > linePos.y){
                         camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y - (fishingLineSpeed * cameraCatchUpSpeed * Time.deltaTime), camera.transform.position.z);
                     }
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour
                 if(linePos.y < 0){
                     lineRenderer.SetPosition(1, new Vector3(linePos.x, linePos.y + (fishingLineSpeed * Time.deltaTime), linePos.z));
                 }
-                if(camera.transform.position.y < 0){
+                if(camera.transform.position.y < 0 && linePos.y > levelHeight){
                     camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y + (fishingLineSpeed * Time.deltaTime), camera.transform.position.z);
                 }
             }
