@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     float fishingLineSpeed = 1f;
     [SerializeField]
     float cameraCatchUpSpeed = 1.2f;
+    [SerializeField]
+    float levelHeight = -12f;
 
     public bool caughtFish = false;
     public bool hookedFish = false;

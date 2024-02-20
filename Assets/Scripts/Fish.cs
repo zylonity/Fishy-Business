@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FIsh : MonoBehaviour
+public class Fish : MonoBehaviour
 {
 
     public string ID = "Undefined";
