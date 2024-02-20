@@ -34,6 +34,7 @@ public class fishingMechanic : MonoBehaviour
     bool pause = false;
 
     [SerializeField] float failTimer = 10f;
+
     private void Start()
     {
         Resize();
@@ -47,6 +48,7 @@ public class fishingMechanic : MonoBehaviour
         Hook();
         ProgressCheck();
     }
+
     private void Resize()
     {
         Bounds b = hookSpriteRenderer.bounds;
