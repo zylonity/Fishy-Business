@@ -25,6 +25,8 @@ public class Fish : MonoBehaviour
 
     float timer = 0;
 
+    public GameObject particlePrefab;
+
     void Start()
     {
         //Default values
@@ -32,7 +34,6 @@ public class Fish : MonoBehaviour
         start = Time.time;
         startPoint = new Vector3(pointA, transform.position.y, transform.position.z);
         endPoint = new Vector3(pointB, transform.position.y, transform.position.z);
-        
     }
 
     void Update()
@@ -42,6 +43,7 @@ public class Fish : MonoBehaviour
             if(gameObject.transform.position.x == pointB && !moved){
                 end = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); //Makes sure particles are going up as particles get scale flipped with fish
                 moved = true;
             }
 
@@ -49,6 +51,7 @@ public class Fish : MonoBehaviour
             if(gameObject.transform.position.x == pointA && moved){
                 start = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); //Makes sure particles are going up as particles get scale flipped with fish
                 moved = false;
             }
 
@@ -65,7 +68,8 @@ public class Fish : MonoBehaviour
                 player.caughtFish = false;
                 player.uiController.fishCaught(ID);
                 hooked = false;
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
             }
 
             
@@ -95,6 +99,16 @@ public class Fish : MonoBehaviour
         
     }
 
+    IEnumerator HideThenDestroy()
+    {
+        GetComponent<SpriteRenderer>().enabled = false; //Hides fish sprite
+        particlePrefab.GetComponent<ParticleSystem>().loop = false; //Stops spawning bubbles
+
+        yield return new WaitForSeconds(3f);
+        
+        Destroy(gameObject);
+
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         //Verify player touched fish and freeze screen
@@ -105,6 +119,17 @@ public class Fish : MonoBehaviour
                 player.hookedFish = true;
                 hooked = true;
 
+                //Flips hook towards collider
+                BoxCollider2D fishCollider = GetComponent<BoxCollider2D>();
+
+                if (hook.position.x < transform.position.x + fishCollider.bounds.center.x && col.name == "Hook")
+                {
+                    col.GetComponentInChildren<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    col.GetComponentInChildren<SpriteRenderer>().flipX = false;
+                }
              }
             
         }

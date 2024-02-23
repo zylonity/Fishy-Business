@@ -6,8 +6,7 @@ using UnityEngine;
 public class ReSkinAnimation : MonoBehaviour
 {
     public string spriteSheetName;
-
-    private void LateUpdate()
+    void LateUpdate()
     {
         var subSprites = Resources.LoadAll<Sprite>("Fish/" + spriteSheetName);
 

@@ -498,7 +498,7 @@ Animator:
   m_GameObject: {fileID: 325358195}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4ffaa048e2c72b448b8c9f990689ecbc, type: 2}
+  m_Controller: {fileID: 9100000, guid: cd9a104184b9aa64e99ac827cffee087, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1604,6 +1604,10 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 5921148319463084843, guid: 8d354e45ca09c3740b761ec2c0f807c8, type: 3}
+      propertyPath: spriteSheetName
+      value: Starfish
+      objectReference: {fileID: 0}
     - target: {fileID: 6381052548995396822, guid: 8d354e45ca09c3740b761ec2c0f807c8, type: 3}
       propertyPath: m_Name
       value: Starfish
@@ -1716,6 +1720,10 @@ PrefabInstance:
     - target: {fileID: 4774808358038276169, guid: 8344628cb7b27394290f1b0d4d1fb865, type: 3}
       propertyPath: movementSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584407466182836693, guid: 8344628cb7b27394290f1b0d4d1fb865, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2164,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1115048974808551075, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2507605698565741276, guid: 5708651569e5a91448655a2401564d73, type: 3}
       propertyPath: hook
       value: 
@@ -2199,6 +2211,22 @@ PrefabInstance:
     - target: {fileID: 5107980774044684590, guid: 5708651569e5a91448655a2401564d73, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238396079361518677, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44474292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238396079361518677, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6204426
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238396079361518677, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5231583
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238396079361518677, guid: 5708651569e5a91448655a2401564d73, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.5091203
       objectReference: {fileID: 0}
     - target: {fileID: 5242314597410158465, guid: 5708651569e5a91448655a2401564d73, type: 3}
       propertyPath: m_RootOrder
@@ -2464,6 +2492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1731215196679839047, guid: 4a66d6e817734ac478a6ca427c5e0627, type: 3}
+      propertyPath: spriteSheetName
+      value: Blobfish
+      objectReference: {fileID: 0}
     - target: {fileID: 2128130912088704790, guid: 4a66d6e817734ac478a6ca427c5e0627, type: 3}
       propertyPath: prewarm
       value: 1
@@ -2515,10 +2547,6 @@ PrefabInstance:
     - target: {fileID: 4922818085553474796, guid: 4a66d6e817734ac478a6ca427c5e0627, type: 3}
       propertyPath: m_Name
       value: Blobfish
-      objectReference: {fileID: 0}
-    - target: {fileID: 5139354737781974351, guid: 4a66d6e817734ac478a6ca427c5e0627, type: 3}
-      propertyPath: movementSpeed
-      value: 0.333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2864,6 +2892,7 @@ GameObject:
   - component: {fileID: 1936278675}
   - component: {fileID: 1936278674}
   - component: {fileID: 1936278673}
+  - component: {fileID: 1936278676}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2949,6 +2978,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936278676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936278672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 64
+  m_RefResolutionX: 360
+  m_RefResolutionY: 640
+  m_UpscaleRT: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1001 &2005232146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2957,13 +3006,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1207324780679069049, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207324780679069049, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1879186787802736334, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
       propertyPath: m_Name
       value: Stickleback
-      objectReference: {fileID: 0}
-    - target: {fileID: 2132729285288980639, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
-      propertyPath: movementSpeed
-      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6162774693532588904, guid: 48f4ea843429b4643b01ec28bb1b6a7b, type: 3}
       propertyPath: m_RootOrder
@@ -3098,6 +3151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 249032283408646201, guid: 4ff1359926a1f7545b87ec3c8e0c7b58, type: 3}
+      propertyPath: spriteSheetName
+      value: Pufferfish
+      objectReference: {fileID: 0}
     - target: {fileID: 1950868052789411963, guid: 4ff1359926a1f7545b87ec3c8e0c7b58, type: 3}
       propertyPath: m_RootOrder
       value: 8
