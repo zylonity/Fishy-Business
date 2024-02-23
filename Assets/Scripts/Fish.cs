@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Fish : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class Fish : MonoBehaviour
     float timer = 0;
 
     public GameObject particlePrefab;
+    private Light2D[] lights;
 
     void Start()
     {
@@ -34,16 +36,24 @@ public class Fish : MonoBehaviour
         start = Time.time;
         startPoint = new Vector3(pointA, transform.position.y, transform.position.z);
         endPoint = new Vector3(pointB, transform.position.y, transform.position.z);
+        lights = GetComponentsInChildren<Light2D>();
     }
 
     void Update()
     {
+        
         if(!caught && !hooked){
             //Reset fish trajectory
             if(gameObject.transform.position.x == pointB && !moved){
                 end = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-                particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); //Makes sure particles are going up as particles get scale flipped with fish
+
+                //Makes sure particles are going up as particles get scale flipped with fish
+                if (particlePrefab)
+                {
+                    particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); 
+                }
+                
                 moved = true;
             }
 
@@ -51,7 +61,13 @@ public class Fish : MonoBehaviour
             if(gameObject.transform.position.x == pointA && moved){
                 start = Time.time;
                 gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-                particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); //Makes sure particles are going up as particles get scale flipped with fish
+                
+                //Makes sure particles are going up as particles get scale flipped with fish
+                if (particlePrefab)
+                {
+                    particlePrefab.transform.localScale = new Vector3(-particlePrefab.transform.localScale.x, particlePrefab.transform.localScale.y, particlePrefab.transform.localScale.z); 
+                }
+                
                 moved = false;
             }
 
@@ -102,7 +118,12 @@ public class Fish : MonoBehaviour
     IEnumerator HideThenDestroy()
     {
         GetComponent<SpriteRenderer>().enabled = false; //Hides fish sprite
-        particlePrefab.GetComponent<ParticleSystem>().loop = false; //Stops spawning bubbles
+
+        //Disables lights
+        foreach (Light2D light in lights)
+        {
+            light.gameObject.SetActive(false);
+        }
 
         yield return new WaitForSeconds(3f);
         
@@ -139,9 +160,16 @@ public class Fish : MonoBehaviour
 
     bool FishStruggle(){
         timer += Time.deltaTime;
-
+        
         if(timer < 5){
             //Add fish struggle here
+            
+            
+            //Stops spawning bubbles
+            if (particlePrefab)
+            {
+                particlePrefab.GetComponent<ParticleSystem>().loop = false; 
+            }
 
             return false;
         }
