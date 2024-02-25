@@ -52,10 +52,10 @@ public class fishingMechanic : MonoBehaviour
     private void Resize()
     {
         Bounds b = hookSpriteRenderer.bounds;
-        float ySize = b.size.y;
+        float xSize = b.size.x;
         Vector3 ls = hook.localScale;
         float distance = Vector3.Distance(top.position, bottom.position);
-        ls.y = (distance / ySize * hookSize);
+        ls.x = (distance / xSize * hookSize);
         hook.localScale = ls;
     }
 
@@ -77,12 +77,12 @@ public class fishingMechanic : MonoBehaviour
             hookProgress -= hookDeProgressPower * Time.deltaTime;
 
             failTimer -= Time.deltaTime;
-            if(failTimer < 0f)
+            if (failTimer < 0f)
             {
                 Lose();
             }
         }
-        
+
         if (hookProgress > 1f)
         {
             Win();
@@ -103,17 +103,19 @@ public class fishingMechanic : MonoBehaviour
         Debug.Log("The fish got away :(");
 
     }
+
     void Hook()
     {
         if(Input.GetMouseButton(0))
         {
             hookPullVelocity += hookPullPower * Time.deltaTime;
         }
+
         hookPullVelocity -= hookGravity * Time.deltaTime;
 
         hookPosition += hookPullVelocity;
 
-        if(hookPosition - hookSize / 2 <= 0f && hookPullVelocity < 0f)
+        if (hookPosition - hookSize / 2 <= 0f && hookPullVelocity < 0f)
         {
             hookPullVelocity = 0f;
         }
@@ -122,7 +124,7 @@ public class fishingMechanic : MonoBehaviour
             hookPullVelocity = 0f;
         }
 
-        hookPosition = Mathf.Clamp(hookPosition, hookSize / 2, 1 - hookSize /2);
+        hookPosition = Mathf.Clamp(hookPosition, hookSize/2, 1 - hookSize/2);
         hook.position = Vector3.Lerp(bottom.position, top.position, hookPosition);
     }
 
