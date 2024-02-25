@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 2.3
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,6 +119,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -128,16 +154,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 649
-        height: 637
+        width: 50.666668
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6b281105379e904ca76dfe59caab81e
+      spriteID: fa720ade4d08ef744ac938ed64ced134
       internalID: -954893847
       vertices: []
       indices: 
@@ -147,18 +173,18 @@ TextureImporter:
       name: swim1
       rect:
         serializedVersion: 2
-        x: 649
+        x: 50
         y: 0
-        width: 649
-        height: 637
+        width: 50.666668
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9099304650567414d9d7b7eb51c0f599
+      spriteID: 08cc198f832ebba478136fa730d76723
       internalID: -1829442980
       vertices: []
       indices: 
@@ -168,18 +194,18 @@ TextureImporter:
       name: swim2
       rect:
         serializedVersion: 2
-        x: 1298
+        x: 100
         y: 0
-        width: 649
-        height: 637
+        width: 50.666668
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826323b18e480b14c8fd133226a0e3e1
+      spriteID: f6812ccdaa2098b408a2ac7702108211
       internalID: 1203970974
       vertices: []
       indices: 
