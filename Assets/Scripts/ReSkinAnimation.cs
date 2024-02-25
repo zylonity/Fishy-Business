@@ -6,9 +6,19 @@ using UnityEngine;
 public class ReSkinAnimation : MonoBehaviour
 {
     public string spriteSheetName;
+
+    private Sprite[] subSprites;
+
+    void Start(){
+        subSprites = Resources.LoadAll<Sprite>("Fish/" + spriteSheetName);
+        foreach (var subSprite in subSprites)
+        {
+            Debug.Log(subSprite.name);
+        }
+    }
+
     void LateUpdate()
     {
-        var subSprites = Resources.LoadAll<Sprite>("Fish/" + spriteSheetName);
 
         foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
         {

@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,68 +119,94 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: swim0
+      name: Squid_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 640
+        width: 50
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e36a739df8b34d438ac162a7c8b63ce
-      internalID: -328550849
+      spriteID: 46c3df6a1dad37644accfed0322b8c00
+      internalID: -307563198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: swim1
+      name: Squid_1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 50
         y: 0
-        width: 640
-        height: 640
+        width: 50
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40a66768c734e3349a89389b0ed97049
-      internalID: 1686917741
+      spriteID: 7849333c57b279548a9e662a82da2b58
+      internalID: 736317646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: swim2
+      name: Squid_2
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 100
         y: 0
-        width: 640
-        height: 640
+        width: 50
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8f71e1e90a3eb438aaaefc7d7066f2
-      internalID: -229106243
+      spriteID: 470105280f73d9d4484f7e29e9754072
+      internalID: 273466910
       vertices: []
       indices: 
       edges: []
@@ -196,9 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      swim0: -328550849
-      swim1: 1686917741
-      swim2: -229106243
+      Squid_0: -307563198
+      Squid_1: 736317646
+      Squid_2: 273466910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
