@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 209f1859eeb787b42bcef28921f96577
+guid: 7d0b9682b530f354db9ba3d14fe3165e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +70,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,6 +107,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_0
+      name: lvl2Bottom_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +163,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105638732039c6b43bec33b444938978
-      internalID: 512985332
+      spriteID: f682665846349234d92cb88e88361f48
+      internalID: -2034193082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_1
+      name: lvl2Bottom_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a149551e395b3a7448b02e8e15031701
+      internalID: 1533626084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b90cecaa89b5514398f9fde24c0eb66
+      internalID: -990156663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b242bbf4504e84ba98417e5c0bebbe
+      internalID: -245420968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d63a0eecc89ea4eae6ce52140969ce
+      internalID: -1502186669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_5
       rect:
         serializedVersion: 2
         x: 450
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +268,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43099fa18fa126042ad9d481172cfc9b
-      internalID: 901926087
+      spriteID: 515c7fb437458bb48897611623dedd10
+      internalID: 1108203640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_2
+      name: lvl2Bottom_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e8d179aab005b40a4219b4509817f4
+      internalID: -1056160862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8e0599f53187a47a5f1c0fe9d29988
+      internalID: 380444559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_8
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598aff56bcbbb9c4488cc590c28cf1da
+      internalID: 496887474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_9
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 90
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7b2aa23dc1f2246b1490adb5c8da1e
+      internalID: -1787696305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2Bottom_10
       rect:
         serializedVersion: 2
         x: 900
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +373,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd157efc72ba294f8e3fdce569b1b19
-      internalID: -1447226823
+      spriteID: f0d5c8c6d65160c479869e21fc1446a2
+      internalID: 513968770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_3
+      name: lvl2Bottom_11
       rect:
         serializedVersion: 2
-        x: 1350
+        x: 990
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +394,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d271ef273dde54ea8fcf8f17eeb2ab
-      internalID: 1236083292
+      spriteID: 657bb845359a60045bcf7d2e376ccef8
+      internalID: -999115617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_4
+      name: lvl2Bottom_12
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 1080
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cac7b5092bda79c4c93297b969ed0079
-      internalID: -1467149644
+      spriteID: da1baf523e0fdf74790b04546fe38956
+      internalID: 1769439431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Level2_Background_BOT_5
+      name: lvl2Bottom_13
       rect:
         serializedVersion: 2
-        x: 2250
+        x: 1170
         y: 0
-        width: 450
-        height: 216
+        width: 90
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,176 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29617d4146e72444aa44fdbd1cc595ec
-      internalID: 1970832045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_6
-      rect:
-        serializedVersion: 2
-        x: 2700
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba87631f03f320f42a0f89ab2b6559d3
-      internalID: -431229233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_7
-      rect:
-        serializedVersion: 2
-        x: 3150
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb46bc97303e4d24390d840de5ffd748
-      internalID: 1470303124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_8
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27a455275ebfeee4bb0e3ae7bd470cd7
-      internalID: 891401635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_9
-      rect:
-        serializedVersion: 2
-        x: 4050
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab7b655ecb8e8fa41b92cff80820ec7f
-      internalID: -1543031525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_10
-      rect:
-        serializedVersion: 2
-        x: 4500
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd2a76776e63a4c4aa3bcc5afab2764c
-      internalID: 472360842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_11
-      rect:
-        serializedVersion: 2
-        x: 4950
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 158ba9f9d13b3c44f95579515f44fbd5
-      internalID: -824337946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_12
-      rect:
-        serializedVersion: 2
-        x: 5400
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03412dc869985df43ba89191c99f5f62
-      internalID: 1543005285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Level2_Background_BOT_13
-      rect:
-        serializedVersion: 2
-        x: 5850
-        y: 0
-        width: 450
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 274f9966c679e044791d7550a46cbdee
-      internalID: -707829393
+      spriteID: c1eaf0a7f8a5f71439a77788a758a79a
+      internalID: -2138758146
       vertices: []
       indices: 
       edges: []
@@ -427,20 +453,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      T_Level2_Background_BOT_0: 512985332
-      T_Level2_Background_BOT_1: 901926087
-      T_Level2_Background_BOT_10: 472360842
-      T_Level2_Background_BOT_11: -824337946
-      T_Level2_Background_BOT_12: 1543005285
-      T_Level2_Background_BOT_13: -707829393
-      T_Level2_Background_BOT_2: -1447226823
-      T_Level2_Background_BOT_3: 1236083292
-      T_Level2_Background_BOT_4: -1467149644
-      T_Level2_Background_BOT_5: 1970832045
-      T_Level2_Background_BOT_6: -431229233
-      T_Level2_Background_BOT_7: 1470303124
-      T_Level2_Background_BOT_8: 891401635
-      T_Level2_Background_BOT_9: -1543031525
+      lvl2Bottom_0: -2034193082
+      lvl2Bottom_1: 1533626084
+      lvl2Bottom_10: 513968770
+      lvl2Bottom_11: -999115617
+      lvl2Bottom_12: 1769439431
+      lvl2Bottom_13: -2138758146
+      lvl2Bottom_2: -990156663
+      lvl2Bottom_3: -245420968
+      lvl2Bottom_4: -1502186669
+      lvl2Bottom_5: 1108203640
+      lvl2Bottom_6: -1056160862
+      lvl2Bottom_7: 380444559
+      lvl2Bottom_8: 496887474
+      lvl2Bottom_9: -1787696305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
