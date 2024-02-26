@@ -19,7 +19,6 @@ public class UITestButtons : MonoBehaviour
 
     public void CatchFishButton()
     {
-        int catchPrice = Random.Range(10, 1001);
-        UIController.AddCash(catchPrice);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.CatchFish);
     }
 }
