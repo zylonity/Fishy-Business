@@ -7,77 +7,47 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public GameObject Canvas;
+    
     [Header("Quota")]
-    public int currentCash;
-    public int quotaCash = 100;
     public Image barFill;
     public TextMeshProUGUI cashText;
     public GameObject FloatingNumberPrefab;
 
     [Header("Timer")] 
-    public float timeSinceStart;
-    public float timeInDay; //in seconds (Should probably be stored somewhere else)
     public GameObject timerHand;
     public Image timerFill;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        UpdateQuota();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateTimer();
-    }
+    [Header("Day Completion")] 
+    public GameObject SuccessPanelPrefab;
+    public GameObject LossPanelPrefab;
 
-    public void UpdateQuota()
+    public void UpdateQuotaUI(int currentCash, int quotaCash)
     {
         barFill.fillAmount = (float)currentCash / quotaCash;
         cashText.text = currentCash.ToString() + "/" + quotaCash.ToString();
     }
 
-    public void AddCash(int amount)
+    public void SpawnFloatingNumber(int amount)
     {
-        currentCash += amount;
-        UpdateQuota();
-        
-        //Spawns Floating UI
         GameObject temp = Instantiate(FloatingNumberPrefab, cashText.transform.parent.parent);
         temp.GetComponent<FloatingNumber>().SalePrice = amount;
     }
 
-    public void fishCaught(string fishID)
+    public void UpdateTimerUI(float timeSinceStart, float timeInDay)
     {
-        if(fishID == "Undefined"){
-            AddCash(10);
-        }
-        if(fishID == "ClownFish"){
-            AddCash(UnityEngine.Random.Range(10,30));
-        }
-        if(fishID == "Stickleback"){
-            AddCash(UnityEngine.Random.Range(5,15));
-        }
-        if(fishID == "Squid"){
-            AddCash(10);
-        }
-        if(fishID == "Pufferfish"){
-            AddCash(UnityEngine.Random.Range(500,825));
-        }
-        if(fishID == "Starfish"){
-            AddCash(10);
-        }
-        if(fishID == "Blobfish"){
-            AddCash(UnityEngine.Random.Range(1000,5000));
-        }
-    }
-
-    public void UpdateTimer()
-    {
-        if (timeSinceStart >= timeInDay) return; //Stops updating timer once day is done
-        timeSinceStart += Time.deltaTime;
         timerFill.fillAmount = timeSinceStart / timeInDay;
         timerHand.transform.rotation = Quaternion.Euler(0,0,-(timeSinceStart % timeInDay) / timeInDay * 360);
+    }
+
+    public void ShowSuccessPanel()
+    {
+        GameObject temp = Instantiate(SuccessPanelPrefab, Canvas.transform);
+        temp.GetComponent<SuccessPanel>().SetText();
+    }
+    
+    public void ShowLossPanel()
+    {
+        GameObject temp = Instantiate(LossPanelPrefab, Canvas.transform);
     }
 }

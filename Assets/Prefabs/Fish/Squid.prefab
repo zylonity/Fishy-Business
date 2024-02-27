@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3187362585901630552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.92, y: -6.32, z: 0}
+  m_LocalPosition: {x: -3.92, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Squid
   movementSpeed: 0.5
+  StruggleMechanicPrefab: {fileID: 3832149579356342060, guid: fae89e2c78372c747887d21b561918f6, type: 3}
   moved: 0
   caught: 0
   hooked: 0
