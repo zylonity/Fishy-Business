@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class SoundManager : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioClip MainMenuBGM;
     public AudioClip[] LevelBGM;
-    public AudioClip CatchFish, CatchFailed, CompleteLvl, AddCash;
+    public AudioClip CatchFish, CatchFailed, CompleteLvl;
     
     public float currentVolumeSFX, currentVolumeMusic;
 
@@ -37,16 +36,15 @@ public class SoundManager : MonoBehaviour
 
         musicSource.volume = currentVolumeMusic;
         
-        //RestartMusic();
+        RestartMusic();
     }
 
     public void PlaySFX(AudioClip clip)
     {
         AudioSource source = Instantiate(sourcePrefab, transform);
 
-        source.volume = currentVolumeSFX/1.5f;
+        source.volume = currentVolumeSFX;
         source.clip = clip;
-        source.pitch = Random.Range(0.75f, 1.25f);
         
         source.Play();
         
@@ -57,7 +55,6 @@ public class SoundManager : MonoBehaviour
     {
         StartCoroutine(Fade(0, 1));
         
-        musicSource.Stop();
         musicSource.loop = true;
         musicSource.clip = bgm;
         musicSource.Play();

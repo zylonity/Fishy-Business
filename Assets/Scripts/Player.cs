@@ -16,7 +16,9 @@ public class Player : MonoBehaviour
 
     public bool caughtFish = false;
     public bool hookedFish = false;
-    public bool failedFish = false;
+
+    public UIController uiController;
+
 
     Vector3 startPos, linePos;
     void Start()

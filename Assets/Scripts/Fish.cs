@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -17,11 +16,10 @@ public class Fish : MonoBehaviour
 
     Vector3 startPoint, endPoint;
 
-    public GameObject StruggleMechanicPrefab;
 
     
     public bool moved = false;
-    public bool caught, failed, hooked = false;
+    public bool caught, hooked = false;
 
     Player player;
     Transform hook;
@@ -44,7 +42,7 @@ public class Fish : MonoBehaviour
     void Update()
     {
         
-        if(!caught && !hooked && !failed){
+        if(!caught && !hooked){
             //Reset fish trajectory
             if(gameObject.transform.position.x == pointB && !moved){
                 end = Time.time;
@@ -58,7 +56,7 @@ public class Fish : MonoBehaviour
                 
                 moved = true;
             }
-            
+
             //Reset fish trajectory
             if(gameObject.transform.position.x == pointA && moved){
                 start = Time.time;
@@ -84,7 +82,7 @@ public class Fish : MonoBehaviour
         else{
             if(hook.position.y > 1.2f){
                 player.caughtFish = false;
-                GameManager.Instance.FishCaught(ID);
+                player.uiController.fishCaught(ID);
                 hooked = false;
                 //Destroy(gameObject);
                 StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
@@ -96,29 +94,17 @@ public class Fish : MonoBehaviour
 
         //Once hooked invoke fight so it runs in update
         if(hooked){
-            if (FishStruggle() == true && player.caughtFish){
+            if (FishStruggle()){
                 caught = true;
                 gameObject.transform.parent = hook;
+                player.caughtFish = true;
                 player.hookedFish = false;
-                
-            }
-            else if (FishStruggle() == true && player.failedFish)
-            {
-                caught = false;
-                hooked = false;
-                player.caughtFish = false;
-                player.hookedFish = false;
-                player.failedFish = false;
-                Destroy(gameObject, 1f);
-   
             }
         }
         else{
             if(caught){
                 caught = false;
-                failed = false;
                 player.caughtFish = false;
-                player.failedFish = false;
                 player.hookedFish = false;
                 timer = 0;
             }
@@ -132,7 +118,6 @@ public class Fish : MonoBehaviour
     IEnumerator HideThenDestroy()
     {
         GetComponent<SpriteRenderer>().enabled = false; //Hides fish sprite
-        GetComponent<BoxCollider2D>().enabled = false; //Disables fish collider
 
         //Disables lights
         foreach (Light2D light in lights)
@@ -151,7 +136,7 @@ public class Fish : MonoBehaviour
         if(col.tag == "Player"){
             player = col.transform.parent.parent.GetComponent<Player>();
             hook = col.transform;
-             if(player.hookedFish == false && player.caughtFish == false && player.failedFish == false){
+             if(player.hookedFish == false && player.caughtFish == false){
                 player.hookedFish = true;
                 hooked = true;
 
@@ -176,19 +161,19 @@ public class Fish : MonoBehaviour
     bool FishStruggle(){
         timer += Time.deltaTime;
         
-        if(timer < 11 && !player.caughtFish && !player.failedFish){
+        if(timer < 5){
             //Add fish struggle here
-
-            if (GameManager.Instance._FishingMechanicParent.transform.childCount < 1 && !player.caughtFish && !player.failedFish)
-            {
-                Instantiate(StruggleMechanicPrefab, GameManager.Instance._FishingMechanicParent.transform);
-            }
             
+            
+            //Stops spawning bubbles
+            if (particlePrefab)
+            {
+                particlePrefab.GetComponent<ParticleSystem>().loop = false; 
+            }
 
             return false;
         }
-        else
-        {
+        else{
             return true;
         }
     }

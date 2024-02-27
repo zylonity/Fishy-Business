@@ -93,19 +93,15 @@ public class fishingMechanic : MonoBehaviour
 
     private void Win()
     {
-        FindObjectOfType<Player>().failedFish = false;
-        FindObjectOfType<Player>().caughtFish = true;
+        pause = true;
         Debug.Log("You Caught Fish !!");
-        SoundManager.Instance.PlaySFX(SoundManager.Instance.CatchFish);
-        Destroy(gameObject);
+
     }
     private void Lose()
     {
-        FindObjectOfType<Player>().failedFish = true;
-        FindObjectOfType<Player>().caughtFish = false;
+        pause = true;
         Debug.Log("The fish got away :(");
-        SoundManager.Instance.PlaySFX(SoundManager.Instance.CatchFailed);
-        Destroy(gameObject);
+
     }
 
     void Hook()

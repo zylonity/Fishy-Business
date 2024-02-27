@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879186787802736334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 0, z: 0}
+  m_LocalPosition: {x: -3.92, y: -5.01, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -104,7 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Stickleback
   movementSpeed: 0.9
-  StruggleMechanicPrefab: {fileID: 3832149579356342060, guid: fae89e2c78372c747887d21b561918f6, type: 3}
   moved: 0
   caught: 0
   hooked: 0
@@ -293,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856265580023455218, guid: 814362f6b1eb42440a5db11a30a3c4e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8856265580023455218, guid: 814362f6b1eb42440a5db11a30a3c4e6, type: 3}
       propertyPath: m_LocalPosition.z
