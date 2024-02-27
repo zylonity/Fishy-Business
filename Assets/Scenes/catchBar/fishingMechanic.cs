@@ -49,7 +49,7 @@ public class fishingMechanic : MonoBehaviour
         ProgressCheck();
     }
 
-    private void Resize()
+    private void Resize() //allows the "hookArea" to be resized and keeps it contained in its own bar area
     {
         Bounds b = hookSpriteRenderer.bounds;
         float xSize = b.size.x;
@@ -59,10 +59,10 @@ public class fishingMechanic : MonoBehaviour
         hook.localScale = ls;
     }
 
-    private void ProgressCheck()
+    private void ProgressCheck() //the longer the hookarea is over the fish, the higher the progress bar goes up/ win and lose conditions
     {
         Vector3 ls = progressBarContainer.localScale;
-        ls.y = hookProgress;
+        ls.x = hookProgress;
         progressBarContainer.localScale = ls;
 
         float min = hookPosition - hookSize / 2;
@@ -91,20 +91,20 @@ public class fishingMechanic : MonoBehaviour
         hookProgress = Mathf.Clamp(hookProgress, 0f, 1f);
     }
 
-    private void Win()
+    private void Win() //temp win message
     {
         pause = true;
         Debug.Log("You Caught Fish !!");
 
     }
-    private void Lose()
+    private void Lose() //temp lose message
     {
         pause = true;
         Debug.Log("The fish got away :(");
 
     }
 
-    void Hook()
+    void Hook() //allows the hook to be controlled by mouse click and has velocity and gravity controls that can be altered
     {
         if(Input.GetMouseButton(0))
         {
@@ -128,7 +128,7 @@ public class fishingMechanic : MonoBehaviour
         hook.position = Vector3.Lerp(bottom.position, top.position, hookPosition);
     }
 
-    void Fish()
+    void Fish() //randomises the speed/movement of the fish icon to add in difficulty 
     {
         fishTimer -= Time.deltaTime;
         if (fishTimer < 0f)
