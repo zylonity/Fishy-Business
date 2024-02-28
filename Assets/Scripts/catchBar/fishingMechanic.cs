@@ -97,6 +97,7 @@ public class fishingMechanic : MonoBehaviour
         Debug.Log("You Caught Fish !!");
 
     }
+
     private void Lose() //temp lose message
     {
         pause = true;
