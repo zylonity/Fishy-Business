@@ -22,7 +22,7 @@ public class MapButtons : MonoBehaviour
         }
     }
 
-    public void GoToLevel(int sceneID) 
+    public void GoToLevel(int sceneID)  //allows you to choose what level/scene each button goes to
     {
         SceneManager.LoadScene(sceneID);
     }
