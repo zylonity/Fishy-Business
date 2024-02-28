@@ -71,13 +71,16 @@ public class Fish : MonoBehaviour
                 moved = false;
             }
 
-            //Move fish
-            if(!moved){
-                transform.position = Vector3.Lerp(startPoint, endPoint, (Time.time - start) * movementSpeed);
+            if(PlayerPrefs.GetInt("GameRunning") == 1){
+                //Move fish
+                if(!moved){
+                    transform.position = Vector3.Lerp(startPoint, endPoint, (Time.time - start) * movementSpeed);
+                }
+                else{
+                    transform.position = Vector3.Lerp(endPoint, startPoint, (Time.time - end) * movementSpeed);
+                }
             }
-            else{
-                transform.position = Vector3.Lerp(endPoint, startPoint, (Time.time - end) * movementSpeed);
-            }
+            
         }
         else{
             if(hook.position.y > 1.2f){

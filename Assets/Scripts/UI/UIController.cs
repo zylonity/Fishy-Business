@@ -61,7 +61,7 @@ public class UIController : MonoBehaviour
                 if (setQuota == false){
                     float nextQuota = currentCash + (1 + level^2 / 10) * UnityEngine.Random.Range(0.0f, 125f);
                     print(nextQuota);
-                    PlayerPrefs.SetInt("LevelQuota" + level.ToString(), currentCash);
+                    PlayerPrefs.SetFloat("LevelQuota" + level.ToString(), currentCash);
                     PlayerPrefs.SetFloat("LevelQuota" + (level+1).ToString(), nextQuota);
                     PlayerPrefs.Save();
                     setQuota = true;
@@ -74,6 +74,18 @@ public class UIController : MonoBehaviour
                 }
             }
             else{
+                if (setQuota == false){
+                    PlayerPrefs.DeleteKey("LevelQuota1");
+                    PlayerPrefs.DeleteKey("LevelQuota2");
+                    PlayerPrefs.DeleteKey("LevelQuota3");
+                    PlayerPrefs.DeleteKey("LevelQuota4");
+                    PlayerPrefs.DeleteKey("LevelQuota5");
+                    PlayerPrefs.SetInt("Level", 1);
+                    PlayerPrefs.Save();
+                    setQuota = true;
+                }
+
+
                 shark.SetActive(true); //lose
                 gameOverTimer += Time.deltaTime;
                 if(gameOverTimer > 1.2f){
