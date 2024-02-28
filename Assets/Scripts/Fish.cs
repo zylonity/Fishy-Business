@@ -84,7 +84,6 @@ public class Fish : MonoBehaviour
                 player.caughtFish = false;
                 player.uiController.fishCaught(ID);
                 hooked = false;
-                //Destroy(gameObject);
                 StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
             }
 

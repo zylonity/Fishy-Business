@@ -369,6 +369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1540553447440183018, guid: 4554a3bf1dfb00f46b916f6f013e285b, type: 3}
+      propertyPath: hook
+      value: 
+      objectReference: {fileID: 2897472139587376733}
     - target: {fileID: 1781250325100617385, guid: 4554a3bf1dfb00f46b916f6f013e285b, type: 3}
       propertyPath: m_Name
       value: Lights
@@ -3584,3 +3588,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5708651569e5a91448655a2401564d73, type: 3}
+--- !u!1 &2897472139587376733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8210547973707758129, guid: 5708651569e5a91448655a2401564d73, type: 3}
+  m_PrefabInstance: {fileID: 2897472139587376732}
+  m_PrefabAsset: {fileID: 0}
