@@ -29,6 +29,7 @@ public class Fish : MonoBehaviour
     float timer = 0;
 
     public GameObject FMechanic;
+    public float time2fish = 10;
 
     public GameObject particlePrefab;
     private Light2D[] lights;
@@ -111,8 +112,9 @@ public class Fish : MonoBehaviour
 
         //Once hooked invoke fight so it runs in update
         if(hooked){
-            if (FishStruggle()){
             player.uiController.timerRunning = false;
+            if (FishStruggle()){
+            player.uiController.timerRunning = true;
             caught = true;
             gameObject.transform.parent = hook;
             player.caughtFish = true;
@@ -120,7 +122,8 @@ public class Fish : MonoBehaviour
             }
         }
         else{
-            if(caught){
+            player.uiController.timerRunning = true;
+            if (caught){
                 caught = false;
                 player.caughtFish = false;
                 player.hookedFish = false;
@@ -181,13 +184,20 @@ public class Fish : MonoBehaviour
         //Freeze fish
         timer += Time.deltaTime;
 
+        
+
         FMechanic.SetActive(true);
         fishingMechanic fmScript = FMechanic.GetComponent<fishingMechanic>();
 
         //Replace fishsuccess with fishing mechanic success
-        if(timer < fmScript.failTimer){
-            if(fishSuccess){
+        if(timer < fmScript.failTimer)
+        {
+            if(fmScript.Success == true)
+            {
+                player.uiController.timerRunning = true;
+                Destroy (FMechanic);
                 return true;
+
             }
             
             //Stops spawning bubbles
@@ -199,7 +209,10 @@ public class Fish : MonoBehaviour
             return false;
         }
         else{
-            if(!fishSuccess){
+            if(fmScript.Success == false)
+            {
+                fmScript.failTimer = time2fish;
+                fmScript.hookProgress = 0;
                 hooked = false;
                 caught = false;
                 player.caughtFish = false;

@@ -18,8 +18,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip CatchFail;
     public AudioClip CatchingAFish;
     public AudioClip WinningALevel;
+    public AudioClip Clicking;
 
-    private void StartMusic()
+    private void Start()
     {
         musicSource.clip = bgm;
         musicSource.Play();
@@ -27,7 +28,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip)
     {
-
+        SFXsource.PlayOneShot(clip);
     }
 }
 

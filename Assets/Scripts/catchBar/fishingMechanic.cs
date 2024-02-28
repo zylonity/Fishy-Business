@@ -21,7 +21,7 @@ public class fishingMechanic : MonoBehaviour
     float hookPosition;
     [SerializeField] float hookSize = 0.1f;
     [SerializeField] float hookPower = 0.5f;
-    float hookProgress;
+    public float hookProgress;
     float hookPullVelocity;
     [SerializeField] float hookPullPower = 0.01f;
     [SerializeField] float hookGravity = 0.005f;
@@ -34,6 +34,8 @@ public class fishingMechanic : MonoBehaviour
     bool pause = false;
 
     [SerializeField] public float failTimer = 10f;
+
+    public bool Success = false;
 
     private void Start()
     {
@@ -79,13 +81,13 @@ public class fishingMechanic : MonoBehaviour
             failTimer -= Time.deltaTime;
             if (failTimer < 0f)
             {
-                Lose();
+                Success = false;
             }
         }
 
         if (hookProgress > 1f)
         {
-            Win();
+            Success = true;
         }
 
         hookProgress = Mathf.Clamp(hookProgress, 0f, 1f);

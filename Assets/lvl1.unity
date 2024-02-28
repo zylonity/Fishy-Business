@@ -1735,17 +1735,19 @@ MonoBehaviour:
   top: {fileID: 2144556434}
   bottom: {fileID: 1091408267}
   fish: {fileID: 1947492930}
-  timeMultiplicator: 3
-  smoothMotion: 1
+  timeMultiplicator: 8
+  smoothMotion: 2
   hook: {fileID: 1242065559}
-  hookSize: 0.2
+  hookSize: 0.1
   hookPower: 0.5
+  hookProgress: 0
   hookPullPower: 0.01
   hookGravity: 0.005
   hookDeProgressPower: 0.1
   hookSpriteRenderer: {fileID: 1242065560}
   progressBarContainer: {fileID: 1286332676}
   failTimer: 10
+  Success: 0
 --- !u!1 &1091408266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1886,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.245
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2289,7 +2291,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.197
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4117,6 +4119,7 @@ MonoBehaviour:
   caught: 0
   hooked: 0
   FMechanic: {fileID: 1041292429}
+  time2fish: 10
   particlePrefab: {fileID: 0}
 --- !u!1 &8031222301128752689
 GameObject:

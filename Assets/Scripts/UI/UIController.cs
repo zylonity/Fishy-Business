@@ -8,6 +8,13 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    //AudioManager audioManager;
+
+    //private void Awake()
+    //{
+    //    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+  
+    //}
 
     public int level;
 
@@ -68,7 +75,7 @@ public class UIController : MonoBehaviour
                     setQuota = true;
                 }
 
-                SoundManager.Instance.PlaySFX(SoundManager.Instance.CompleteLvl);
+                
                 winscreen.SetActive(true);
                 gameOverTimer += Time.deltaTime;
                 if(gameOverTimer > 1.2f){
