@@ -11,10 +11,6 @@ public class ReSkinAnimation : MonoBehaviour
 
     void Start(){
         subSprites = Resources.LoadAll<Sprite>("Fish/" + spriteSheetName);
-        foreach (var subSprite in subSprites)
-        {
-            Debug.Log(subSprite.name);
-        }
     }
 
     void LateUpdate()
