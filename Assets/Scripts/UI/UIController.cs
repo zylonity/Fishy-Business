@@ -39,7 +39,6 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("Level", level);
         PlayerPrefs.SetInt("GameRunning", 1);
         if(level > 1){
             quotaCash = (int)PlayerPrefs.GetFloat("LevelQuota" + level.ToString());
@@ -63,6 +62,7 @@ public class UIController : MonoBehaviour
                     print(nextQuota);
                     PlayerPrefs.SetFloat("LevelQuota" + level.ToString(), currentCash);
                     PlayerPrefs.SetFloat("LevelQuota" + (level+1).ToString(), nextQuota);
+                    PlayerPrefs.SetInt("Level", level+1);
                     PlayerPrefs.Save();
                     setQuota = true;
                 }
