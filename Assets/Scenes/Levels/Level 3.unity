@@ -3215,7 +3215,7 @@ MonoBehaviour:
   cashText: {fileID: 1595368668}
   FloatingNumberPrefab: {fileID: 1157456896194621837, guid: 2482dde791eaa6348b336db4c13a449e, type: 3}
   timeSinceStart: 0
-  timeInDay: 5
+  timeInDay: 60
   timerHand: {fileID: 2030296309}
   timerFill: {fileID: 947028309}
   timerRunning: 1
