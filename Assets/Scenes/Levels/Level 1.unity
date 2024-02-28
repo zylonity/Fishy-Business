@@ -3010,7 +3010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c4e67aeb44b1c4ca33d0b6f6518a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCash: 0
+  level: 1
+  currentCash: 123
   quotaCash: 100
   barFill: {fileID: 666684276}
   cashText: {fileID: 1595368668}

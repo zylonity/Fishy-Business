@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-
+    public int level;
 
     [Header("Quota")]
     public int currentCash;
+
 
     int quotaL2, quotaL3, quotaL4, quotaL5;
     public int quotaCash = 100;
@@ -37,6 +39,12 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Level", level);
+        PlayerPrefs.SetInt("GameRunning", 1);
+        if(level > 1){
+            quotaCash = PlayerPrefs.GetInt("LevelQuota" + level.ToString());
+        }
+        PlayerPrefs.Save();
         UpdateQuota();
     }
 
@@ -47,7 +55,13 @@ public class UIController : MonoBehaviour
             UpdateTimer();
 
         if(gameOver){
-            if (currentCash >= quotaCash){
+            PlayerPrefs.SetInt("GameRunning", 0);
+            PlayerPrefs.Save();
+            if (currentCash >= quotaCash){ //win
+                float nextQuota = currentCash + (1 + level^2 / 10) * UnityEngine.Random.Range(0.0f, 125f);
+                PlayerPrefs.SetInt("LevelQuota" + level.ToString(), currentCash);
+                PlayerPrefs.SetFloat("LevelQuota" + (level+1).ToString(), nextQuota);
+                PlayerPrefs.Save();
                 winscreen.SetActive(true);
                 gameOverTimer += Time.deltaTime;
                 if(gameOverTimer > 1.2f){
@@ -55,7 +69,7 @@ public class UIController : MonoBehaviour
                 }
             }
             else{
-                shark.SetActive(true);
+                shark.SetActive(true); //lose
                 gameOverTimer += Time.deltaTime;
                 if(gameOverTimer > 1.2f){
                     gameOverScreen.SetActive(true);

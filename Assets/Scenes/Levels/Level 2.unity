@@ -3502,6 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c4e67aeb44b1c4ca33d0b6f6518a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 2
   currentCash: 0
   quotaCash: 100
   barFill: {fileID: 666684276}
@@ -3511,6 +3512,13 @@ MonoBehaviour:
   timeInDay: 60
   timerHand: {fileID: 2030296309}
   timerFill: {fileID: 947028309}
+  timerRunning: 1
+  gameOver: 0
+  shark: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  lbutton: {fileID: 0}
+  winscreen: {fileID: 0}
+  wbutton: {fileID: 0}
 --- !u!4 &2096783868
 Transform:
   m_ObjectHideFlags: 0
