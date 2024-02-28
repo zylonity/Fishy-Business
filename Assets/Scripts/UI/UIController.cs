@@ -7,8 +7,12 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+
+
     [Header("Quota")]
     public int currentCash;
+
+    int quotaL2, quotaL3, quotaL4, quotaL5;
     public int quotaCash = 100;
     public Image barFill;
     public TextMeshProUGUI cashText;
@@ -19,6 +23,16 @@ public class UIController : MonoBehaviour
     public float timeInDay; //in seconds (Should probably be stored somewhere else)
     public GameObject timerHand;
     public Image timerFill;
+
+    [Header("Game Over")]
+    public bool timerRunning = true;
+    public bool gameOver = false;
+    public GameObject shark;
+    public GameObject gameOverScreen, lbutton;
+    public GameObject winscreen, wbutton;
+
+    float gameOverTimer = 0;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +43,31 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateTimer();
+        if(timerRunning)
+            UpdateTimer();
+
+        if(gameOver){
+            if (currentCash >= quotaCash){
+                winscreen.SetActive(true);
+                gameOverTimer += Time.deltaTime;
+                if(gameOverTimer > 1.2f){
+                    wbutton.SetActive(true);
+                }
+            }
+            else{
+                shark.SetActive(true);
+                gameOverTimer += Time.deltaTime;
+                if(gameOverTimer > 1.2f){
+                    gameOverScreen.SetActive(true);
+                    shark.SetActive(false);
+                    lbutton.SetActive(true);
+                }
+            }
+        };
+    }
+
+    public void SetQuotas(){
+
     }
 
     public void UpdateQuota()
@@ -101,7 +139,11 @@ public class UIController : MonoBehaviour
 
     public void UpdateTimer()
     {
-        if (timeSinceStart >= timeInDay) return; //Stops updating timer once day is done
+        if (timeSinceStart >= timeInDay){//Stops updating timer once day is done
+            gameOver = true;
+            return;
+
+        }; 
         timeSinceStart += Time.deltaTime;
         timerFill.fillAmount = timeSinceStart / timeInDay;
         timerHand.transform.rotation = Quaternion.Euler(0,0,-(timeSinceStart % timeInDay) / timeInDay * 360);
