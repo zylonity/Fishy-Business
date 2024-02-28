@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    AudioManager audioManager;
 
     public int level;
 
@@ -48,10 +47,6 @@ public class UIController : MonoBehaviour
         PlayerPrefs.Save();
         UpdateQuota();
     }
-    private void Awake() //accesses sound manager
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -73,7 +68,7 @@ public class UIController : MonoBehaviour
                     setQuota = true;
                 }
 
-                audioManager.PlaySFX(audioManager.WinningALevel);
+                SoundManager.Instance.PlaySFX(SoundManager.Instance.CompleteLvl);
                 winscreen.SetActive(true);
                 gameOverTimer += Time.deltaTime;
                 if(gameOverTimer > 1.2f){
@@ -186,4 +181,5 @@ public class UIController : MonoBehaviour
         timerFill.fillAmount = timeSinceStart / timeInDay;
         timerHand.transform.rotation = Quaternion.Euler(0,0,-(timeSinceStart % timeInDay) / timeInDay * 360);
     }
+
 }
