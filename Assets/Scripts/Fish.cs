@@ -47,6 +47,10 @@ public class Fish : MonoBehaviour
     void Update()
     {
         
+        if(FMechanic != null && gameObject.transform.position.x > -1.38 && gameObject.transform.position.x < 1.38){
+            FMechanic.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 1f, 0);
+        }
+
         if(!caught && !hooked){
             //Reset fish trajectory
             if(gameObject.transform.position.x == pointB && !moved){
@@ -114,16 +118,17 @@ public class Fish : MonoBehaviour
         if(hooked){
             player.uiController.timerRunning = false;
             if (FishStruggle()){
-            player.uiController.timerRunning = true;
-            caught = true;
-            gameObject.transform.parent = hook;
-            player.caughtFish = true;
-            player.hookedFish = false;
+                player.uiController.timerRunning = true;
+                caught = true;
+                gameObject.transform.parent.gameObject.transform.parent = hook;
+                player.caughtFish = true;
+                player.hookedFish = false;
+                //hooked = false;
             }
         }
         else{
-            player.uiController.timerRunning = true;
             if (caught){
+                player.uiController.timerRunning = true;
                 caught = false;
                 player.caughtFish = false;
                 player.hookedFish = false;
@@ -148,7 +153,7 @@ public class Fish : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
 
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -182,7 +187,7 @@ public class Fish : MonoBehaviour
 
     bool FishStruggle(){
         //Freeze fish
-        timer += Time.deltaTime;
+        //timer += Time.deltaTime;
 
         
 
@@ -190,10 +195,11 @@ public class Fish : MonoBehaviour
         fishingMechanic fmScript = FMechanic.GetComponent<fishingMechanic>();
 
         //Replace fishsuccess with fishing mechanic success
-        if(timer < fmScript.failTimer)
+        if(fmScript.failTimer > 0)
         {
             if(fmScript.Success == true)
             {
+                
                 player.uiController.timerRunning = true;
                 Destroy (FMechanic);
                 return true;

@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  currentCash: 100
+  currentCash: 0
   quotaCash: 100
   barFill: {fileID: 666684276}
   cashText: {fileID: 1595368668}
