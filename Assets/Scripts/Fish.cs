@@ -17,7 +17,7 @@ public class Fish : MonoBehaviour
     Vector3 startPoint, endPoint;
 
 
-    
+    public bool level5;
     public bool moved = false;
     public bool caught, hooked = false;
 
@@ -83,12 +83,23 @@ public class Fish : MonoBehaviour
             
         }
         else{
-            if(hook.position.y > 1.2f){
-                player.caughtFish = false;
-                player.uiController.fishCaught(ID);
-                hooked = false;
-                StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
+            if(!level5){
+                if(hook.position.y > 1.2f){
+                    player.caughtFish = false;
+                    player.uiController.fishCaught(ID);
+                    hooked = false;
+                    StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
+                }
             }
+            else{
+                if(hook.position.y < 2f){
+                    player.caughtFish = false;
+                    player.uiController.fishCaught(ID);
+                    hooked = false;
+                    StartCoroutine(HideThenDestroy()); //added to allow bubbles to fade out when fish is caught
+                }
+            }
+            
 
             
 

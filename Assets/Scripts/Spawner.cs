@@ -29,12 +29,16 @@ public class Spawner : MonoBehaviour
         }
         allFish = Resources.LoadAll<GameObject>("Prefabs/Fish");
         posY = gameObject.transform.position.y;
+        foreach (GameObject fish in allFish){
+            print(fish.name);
+        }
 
     }
 
     
     void Update()
     {
+
         timer += Time.deltaTime;
         if (currentFish == null){
             if (timer > timerMax){
@@ -42,28 +46,28 @@ public class Spawner : MonoBehaviour
                     float fishToSpawn = Random.Range(0.0f, 1.65f);
                     if (fishToSpawn <= 0.05f){ //5%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Koi")){
+                            if (fish.name.Equals("Koi")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.35f){ //30%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Goldfish")){
+                            if (fish.name.Equals("Goldfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.85f){ //50%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Stickleback")){
+                            if (fish.name.Equals("Stickleback")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.65f){ //80%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Clownfish")){
+                            if (fish.name.Equals("Clownfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
@@ -74,28 +78,28 @@ public class Spawner : MonoBehaviour
                     float fishToSpawn = Random.Range(0.0f, 1.0f);
                     if (fishToSpawn <= 0.1f){ //10%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Roach")){
+                            if (fish.name.Equals("Roach")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.25f){ //15%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Koi")){
+                            if (fish.name.Equals("Koi")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.55f){ //30%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Bream")){
+                            if (fish.name.Equals("Bream")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.0f){ //45%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Starfish")){
+                            if (fish.name.Equals("Starfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
@@ -106,28 +110,28 @@ public class Spawner : MonoBehaviour
                     float fishToSpawn = Random.Range(0.0f, 1.0f);
                     if (fishToSpawn <= 0.05f){ //5%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Bass")){
+                            if (fish.name.Equals("Bass")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.25f){ //20%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Koi")){
+                            if (fish.name.Equals("Koi")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.55f){ //30%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Bream")){
+                            if (fish.name.Equals("Bream")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.0f){ //45%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Squid")){
+                            if (fish.name.Equals("Squid")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
@@ -138,35 +142,35 @@ public class Spawner : MonoBehaviour
                     float fishToSpawn = Random.Range(0.0f, 1.1f);
                     if (fishToSpawn <= 0.01f){ //1%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Blobfish")){
+                            if (fish.name.Equals("Blobfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.05f){ //4%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Anglerfish")){
+                            if (fish.name.Equals("Anglerfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.20f){ //15%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Pufferfish")){
+                            if (fish.name.Equals("Pufferfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.55f){ //35%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Salmon")){
+                            if (fish.name.Equals("Salmon")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.10f){ //55%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("Tuna")){
+                            if (fish.name.Equals("Tuna")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
@@ -176,35 +180,35 @@ public class Spawner : MonoBehaviour
                     float fishToSpawn = Random.Range(0.0f, 1.1f);
                     if (fishToSpawn <= 0.05f){ //5%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("SpaceBlobfish")){
+                            if (fish.name.Equals("SpaceBlobfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.30f){ //25%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("SpaceAnglerfish")){
+                            if (fish.name.Equals("SpaceAnglerfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 0.65f){ //35%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("SpaceRoach")){
+                            if (fish.name.Equals("SpaceRoach")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.0f){ //35%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("SpaceSalmon")){
+                            if (fish.name.Equals("SpaceSalmon")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
                     }
                     else if (fishToSpawn <= 1.5f){ //50%
                         foreach (GameObject fish in allFish){
-                            if (fish.name.Contains("SpaceClownfish")){
+                            if (fish.name.Equals("SpaceClownfish")){
                                 currentFish = Instantiate(fish, new Vector3(0, posY, 0), Quaternion.identity);
                             }
                         }
