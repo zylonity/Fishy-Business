@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Fish
   - Spawner
+<<<<<<< Updated upstream
   - PlayerL5
+=======
+  - Sound
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

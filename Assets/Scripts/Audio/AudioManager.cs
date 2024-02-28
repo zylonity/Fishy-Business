@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip lvl3bgm;
     public AudioClip lvl4bgm;
     public AudioClip lvl5bgm;
+    public AudioClip CatchFail;
+    public AudioClip CatchingAFish;
+    public AudioClip WinningALevel;
 
     private void StartMusic()
     {
