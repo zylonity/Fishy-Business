@@ -26,6 +26,8 @@ public class Fish : MonoBehaviour
 
     float timer = 0;
 
+    public GameObject FMechanic;
+
     public GameObject particlePrefab;
     private Light2D[] lights;
 
@@ -174,8 +176,13 @@ public class Fish : MonoBehaviour
 
     bool FishStruggle(){
         timer += Time.deltaTime;
-        
-        if(timer < 5){
+
+        FMechanic.SetActive(true);
+
+        fishingMechanic fmScript = FMechanic.GetComponent<fishingMechanic>();
+        player.uiController.timerRunning = false;
+
+        if(timer < fmScript.failTimer){
             //Add fish struggle here
             
             
@@ -188,7 +195,9 @@ public class Fish : MonoBehaviour
             return false;
         }
         else{
+            player.uiController.timerRunning = true;
             return true;
+            
         }
     }
 }

@@ -33,7 +33,7 @@ public class fishingMechanic : MonoBehaviour
 
     bool pause = false;
 
-    [SerializeField] float failTimer = 10f;
+    [SerializeField] public float failTimer = 10f;
 
     private void Start()
     {
