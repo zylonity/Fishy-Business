@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class MapButtons : MonoBehaviour
 {
+    AudioManager audioManager;
+
     public Button[] buttons;
 
     private void Awake()
@@ -20,11 +22,16 @@ public class MapButtons : MonoBehaviour
         {
             buttons[i].interactable = true;
         }
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
     }
 
     public void GoToLevel(int sceneID)  //allows you to choose what level/scene each button goes to
     {
+
         SceneManager.LoadScene(sceneID);
+        audioManager.PlaySFX(audioManager.Clicking);
     }
 
  

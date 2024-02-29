@@ -15,8 +15,8 @@ public class Buttons : MonoBehaviour
     }
     public void StartGame(int sceneID) // sets menu as the first scene so we can switch to the next scene (level 1) and start the game
     {
-        SceneManager.LoadScene(sceneID);
         audioManager.PlaySFX(audioManager.Clicking);
+        SceneManager.LoadScene(sceneID);
     }
 
     public GameObject Panel;    // allow a popup for the options menu to be accessed

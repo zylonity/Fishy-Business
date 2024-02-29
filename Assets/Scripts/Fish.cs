@@ -5,6 +5,11 @@ using UnityEngine.Rendering.Universal;
 
 public class Fish : MonoBehaviour
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public string ID = "Undefined";
     public float movementSpeed = 1f;
@@ -186,10 +191,6 @@ public class Fish : MonoBehaviour
     }
 
     bool FishStruggle(){
-        //Freeze fish
-        //timer += Time.deltaTime;
-
-        
         if (FMechanic != null)
         {
             FMechanic.SetActive(true);
@@ -200,7 +201,7 @@ public class Fish : MonoBehaviour
             {
                 if(fmScript.Success == true)
                 {
-                    
+                    audioManager.PlaySFX(audioManager.CatchingAFish);
                     player.uiController.timerRunning = true;
                     Destroy (FMechanic);
                     return true;
@@ -226,7 +227,8 @@ public class Fish : MonoBehaviour
                     player.hookedFish = false;
                     FMechanic.SetActive(false);
                     timer = 0;
-                }
+                    audioManager.PlaySFX(audioManager.CatchFail);
+            }
                 player.uiController.timerRunning = true;
                 return false;
                 
