@@ -190,45 +190,51 @@ public class Fish : MonoBehaviour
         //timer += Time.deltaTime;
 
         
-
-        FMechanic.SetActive(true);
-        fishingMechanic fmScript = FMechanic.GetComponent<fishingMechanic>();
-
-        //Replace fishsuccess with fishing mechanic success
-        if(fmScript.failTimer > 0)
+        if (FMechanic != null)
         {
-            if(fmScript.Success == true)
+            FMechanic.SetActive(true);
+            fishingMechanic fmScript = FMechanic.GetComponent<fishingMechanic>();
+
+            //Replace fishsuccess with fishing mechanic success
+            if(fmScript.failTimer > 0)
             {
+                if(fmScript.Success == true)
+                {
+                    
+                    player.uiController.timerRunning = true;
+                    Destroy (FMechanic);
+                    return true;
+
+                }
                 
+                //Stops spawning bubbles
+                if (particlePrefab)
+                {
+                    particlePrefab.GetComponent<ParticleSystem>().loop = false; 
+                }
+
+                return false;
+            }
+            else{
+                if(fmScript.Success == false)
+                {
+                    fmScript.failTimer = time2fish;
+                    fmScript.hookProgress = 0;
+                    hooked = false;
+                    caught = false;
+                    player.caughtFish = false;
+                    player.hookedFish = false;
+                    FMechanic.SetActive(false);
+                    timer = 0;
+                }
                 player.uiController.timerRunning = true;
-                Destroy (FMechanic);
-                return true;
-
+                return false;
+                
             }
-            
-            //Stops spawning bubbles
-            if (particlePrefab)
-            {
-                particlePrefab.GetComponent<ParticleSystem>().loop = false; 
-            }
-
-            return false;
         }
         else{
-            if(fmScript.Success == false)
-            {
-                fmScript.failTimer = time2fish;
-                fmScript.hookProgress = 0;
-                hooked = false;
-                caught = false;
-                player.caughtFish = false;
-                player.hookedFish = false;
-                FMechanic.SetActive(false);
-                timer = 0;
-            }
-            player.uiController.timerRunning = true;
             return false;
-            
         }
+        
     }
 }
