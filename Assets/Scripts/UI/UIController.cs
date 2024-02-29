@@ -70,10 +70,7 @@ public class UIController : MonoBehaviour
 
                 
                 winscreen.SetActive(true);
-                gameOverTimer += Time.deltaTime;
-                if(gameOverTimer > 1.2f){
-                    wbutton.SetActive(true);
-                }
+                wbutton.SetActive(true);
             }
             else{
                 if (setQuota == false){
