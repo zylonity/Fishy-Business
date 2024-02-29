@@ -8,14 +8,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    //AudioManager audioManager;
-
-    //private void Awake()
-    //{
-    //    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
   
-    //}
-
     public int level;
 
     [Header("Quota")]
