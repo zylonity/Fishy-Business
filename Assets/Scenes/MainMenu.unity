@@ -1214,7 +1214,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1328,11 +1328,6 @@ MonoBehaviour:
   musicSource: {fileID: 722723285}
   SFXsource: {fileID: 824932580}
   bgm: {fileID: 8300000, guid: 2d50ce491cfe5e74b9899a3b020b3473, type: 3}
-  lvl1bgm: {fileID: 8300000, guid: 27f357ca04194ea4c934b1d41bbef02e, type: 3}
-  lvl2bgm: {fileID: 8300000, guid: 71a66558356eaa34c9513a2dcca9f346, type: 3}
-  lvl3bgm: {fileID: 8300000, guid: 333ec2b9103ca0948b4c2b3a5288d410, type: 3}
-  lvl4bgm: {fileID: 8300000, guid: 17f489c27a5d10d47b0f0f065acd1353, type: 3}
-  lvl5bgm: {fileID: 8300000, guid: e3f62d5642cf46848a2b89ea90034735, type: 3}
   CatchFail: {fileID: 8300000, guid: b1476356f3391ae469344e4645532bff, type: 3}
   CatchingAFish: {fileID: 8300000, guid: 93d4e72505983e54f952e7a52e337b05, type: 3}
   WinningALevel: {fileID: 8300000, guid: 5d2f2c2e52bab374b8e0c49e8d4bbb8f, type: 3}
