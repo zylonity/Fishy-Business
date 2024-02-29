@@ -135,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 83d8c2d3ae18ac547b42471f6895be93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -219,7 +219,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: accb9c8a650977b428bc9284a2b80915, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -334,7 +334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 8000f11a8cb9b144d9a8ba0f5d9d0656, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -502,7 +502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 8000f11a8cb9b144d9a8ba0f5d9d0656, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -569,15 +569,15 @@ MonoBehaviour:
   top: {fileID: 2041172041991558145}
   bottom: {fileID: 2504393980201891745}
   fish: {fileID: 6031370320403905895}
-  timeMultiplicator: 8
-  smoothMotion: 2
+  timeMultiplicator: 6
+  smoothMotion: 0.9
   hook: {fileID: 7679097475305561144}
-  hookSize: 0.1
+  hookSize: 0.3
   hookPower: 0.5
   hookProgress: 0
   hookPullPower: 0.01
   hookGravity: 0.005
-  hookDeProgressPower: 0.1
+  hookDeProgressPower: 0.2
   hookSpriteRenderer: {fileID: 2513593799348166374}
   progressBarContainer: {fileID: 3028926386242534841}
   failTimer: 10
@@ -687,7 +687,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e02227b89db6b634e8ff486cf0304706, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

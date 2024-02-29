@@ -5476,15 +5476,15 @@ MonoBehaviour:
   top: {fileID: 8824293332406172727}
   bottom: {fileID: 4724830619591435802}
   fish: {fileID: 4026959002423897195}
-  timeMultiplicator: 8
-  smoothMotion: 2
+  timeMultiplicator: 4
+  smoothMotion: 0.9
   hook: {fileID: 8521112682972069105}
-  hookSize: 0.1
+  hookSize: 0.2
   hookPower: 0.5
   hookProgress: 0
   hookPullPower: 0.01
   hookGravity: 0.005
-  hookDeProgressPower: 0.1
+  hookDeProgressPower: 0.16
   hookSpriteRenderer: {fileID: 9067190190126516016}
   progressBarContainer: {fileID: 4810752590567978984}
   failTimer: 10

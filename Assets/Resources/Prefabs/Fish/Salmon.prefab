@@ -5706,10 +5706,10 @@ MonoBehaviour:
   top: {fileID: 6857992319821021096}
   bottom: {fileID: 1736571787190345665}
   fish: {fileID: 6886938377734404422}
-  timeMultiplicator: 8
-  smoothMotion: 2
+  timeMultiplicator: 5
+  smoothMotion: 0.63
   hook: {fileID: 5116674921635831211}
-  hookSize: 0.1
+  hookSize: 0.15
   hookPower: 0.5
   hookProgress: 0
   hookPullPower: 0.01

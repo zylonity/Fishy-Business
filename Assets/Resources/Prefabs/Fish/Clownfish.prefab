@@ -55,10 +55,10 @@ MonoBehaviour:
   top: {fileID: 7587109152906542082}
   bottom: {fileID: 1974140282952891147}
   fish: {fileID: 3935914355464425749}
-  timeMultiplicator: 8
-  smoothMotion: 2
+  timeMultiplicator: 5
+  smoothMotion: 1
   hook: {fileID: 8904394443617680967}
-  hookSize: 0.1
+  hookSize: 0.5
   hookPower: 0.5
   hookProgress: 0
   hookPullPower: 0.01
