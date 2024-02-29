@@ -3360,13 +3360,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  currentCash: 100
+  currentCash: 0
   quotaCash: 100
   barFill: {fileID: 666684276}
   cashText: {fileID: 1595368668}
   FloatingNumberPrefab: {fileID: 1157456896194621837, guid: 2482dde791eaa6348b336db4c13a449e, type: 3}
   timeSinceStart: 0
-  timeInDay: 5
+  timeInDay: 60
   timerHand: {fileID: 2030296309}
   timerFill: {fileID: 947028309}
   timerRunning: 1
