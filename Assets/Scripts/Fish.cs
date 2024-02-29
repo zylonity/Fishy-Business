@@ -106,7 +106,7 @@ public class Fish : MonoBehaviour
                 }
             }
             else{
-                if(hook.position.y < 2f){
+                if(hook.position.y < 3f){
                     player.caughtFish = false;
                     player.uiController.fishCaught(ID);
                     hooked = false;
